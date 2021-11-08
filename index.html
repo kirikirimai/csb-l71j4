@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ブラウザバックのテスト</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <!--[if lt IE 9]>
+      <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h1>ブラウザバックのテスト</h1>
+
+      <div class="explan">
+        <p>
+          ブラウザバックしたときにクリックした要素が選択された状態になっているかテスト<br />
+          sessionStorageを使用しています。
+        </p>
+        <p>
+          クリックしたら背景が赤くなるボックスとアコーディオンが開いたままSECONDページのリンクをクリックして別のページに移動。<br />
+          その後、ブラウザバックで戻ってきたときにクリックした要素が赤くなっている・アコーディオンが開いていたら成功。
+        </p>
+        <p>
+          ブラウザバックは戻る・進むの動作をしている間はsessionStorageに保存されるがリロード・SECONDページへクリックしたらクリアされる。
+        </p>
+      </div>
+
+      <p>Topページ</p>
+      <p><a href="second.html">ＳＥＣＯＮＤへ</a></p>
+
+      <div>
+        <div id="nav1" class="target">
+          <p>ここのボックスをクリックしたら赤くする</p>
+          <button class="btn">赤くする</button>
+        </div>
+
+        <div id="nav2" class="target">
+          <p>ここのボックスをクリックしたら赤くする</p>
+          <button class="btn">赤くする</button>
+        </div>
+
+        <div id="nav3" class="target">
+          <p>ここのボックスをクリックしたら赤くする</p>
+          <button class="btn">赤くする</button>
+        </div>
+      </div>
+
+      <div>
+        <h2>アコーディオン</h2>
+
+        <ul class="navilist">
+          <li>
+            <h5 id="nav_info" class="on2">会社情報</h5>
+            <ul style="display: none;">
+              <li><a href="/company/message/">ごあいさつ</a></li>
+              <li><a href="/company/mission/">私たちの想い・ミッション</a></li>
+              <li><a href="/company/outline/">会社概要・役員一覧</a></li>
+              <li>
+                <a href="/company/fiduciaryduty/"
+                  >お客様本位の業務運営に<br />関する基本方針</a
+                >
+              </li>
+              <li><a href="/company/alliance/">提携金融機関一覧</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <h5 id="nav_torikumi" class="on2">なないろ生命の取り組み</h5>
+            <ul style="display: none;">
+              <li>
+                <a href="/company/pink_ribbon/">ピンクリボン運動の推進</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h5 id="nav_saiyo" class="on2">採用情報</h5>
+            <ul style="display: none;">
+              <li><a href="/company/career_saiyou/">キャリア採用</a></li>
+            </ul>
+          </li>
+          <li>
+            <h5 id="nav_dairiten" class="on2">当社代理店の皆様</h5>
+            <ul style="display: none;">
+              <li>
+                <a href="/agent/"
+                  >代理店の皆様<br class="disPc" />～営業支援システム～</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
